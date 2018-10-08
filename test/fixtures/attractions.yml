@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyText
+  duration_minutes: 1
+  max_capacity: 1
+  company: one
+
+two:
+  name: MyString
+  address: MyText
+  duration_minutes: 1
+  max_capacity: 1
+  company: two

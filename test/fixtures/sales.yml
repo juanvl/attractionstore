@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sale_date: 2018-10-08 23:30:27
+  sale_type: one
+  user: one
+
+two:
+  sale_date: 2018-10-08 23:30:27
+  sale_type: two
+  user: two

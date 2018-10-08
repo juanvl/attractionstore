@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  national_registry_number: MyString
+  social_name: MyString
+  business_name: MyString
+  user: one
+
+two:
+  national_registry_number: MyString
+  social_name: MyString
+  business_name: MyString
+  user: two

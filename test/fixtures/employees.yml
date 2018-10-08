@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  national_registry_number: MyString
+  name: MyString
+  job_role: MyString
+  company: one
+  user: one
+
+two:
+  national_registry_number: MyString
+  name: MyString
+  job_role: MyString
+  company: two
+  user: two

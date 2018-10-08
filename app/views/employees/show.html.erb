@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>National registry number:</strong>
+  <%= @employee.national_registry_number %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @employee.name %>
+</p>
+
+<p>
+  <strong>Job role:</strong>
+  <%= @employee.job_role %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @employee.company %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @employee.user %>
+</p>
+
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employees_path %>

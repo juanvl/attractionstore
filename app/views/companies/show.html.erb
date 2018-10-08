@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>National registry number:</strong>
+  <%= @company.national_registry_number %>
+</p>
+
+<p>
+  <strong>Social name:</strong>
+  <%= @company.social_name %>
+</p>
+
+<p>
+  <strong>Business name:</strong>
+  <%= @company.business_name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @company.user %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
