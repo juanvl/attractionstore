@@ -25,5 +25,10 @@
   <%= @attraction.company %>
 </p>
 
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@attraction.picture) %>
+</p>
+
 <%= link_to 'Edit', edit_attraction_path(@attraction) %> |
 <%= link_to 'Back', attractions_path %>

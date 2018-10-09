@@ -1,4 +1,5 @@
 class AttractionsController < ApplicationController
+  before_action :require_login
   before_action :set_attraction, only: [:show, :edit, :update, :destroy]
 
   # GET /attractions
@@ -69,6 +70,6 @@ class AttractionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def attraction_params
-      params.require(:attraction).permit(:name, :address, :duration_minutes, :max_capacity, :company_id)
+      params.require(:attraction).permit(:name, :address, :duration_minutes, :max_capacity, :company_id, :picture)
     end
 end
