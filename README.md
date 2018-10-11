@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple web app to try ruby on rails.
 
-Things you may want to cover:
+To launch it you just need Docker and Docker Compose installed.
 
-* Ruby version
+https://docs.docker.com/install/
 
-* System dependencies
+https://docs.docker.com/compose/install/
 
-* Configuration
+After that, open terminal and run:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`docker-compose up`
