@@ -5,7 +5,9 @@ class AttractionsController < ApplicationController
   # GET /attractions
   # GET /attractions.json
   def index
-    @attractions = Attraction.all
+    @company = get_my_company_id
+
+    @attractions = Attraction.where(company_id:@company.id)
   end
 
   # GET /attractions/1
@@ -25,7 +27,18 @@ class AttractionsController < ApplicationController
   # POST /attractions
   # POST /attractions.json
   def create
-    @attraction = Attraction.new(attraction_params)
+    if am_i_employee?
+      return
+    end
+    
+    @company = get_my_company_id
+    @attraction = Attraction.new
+    @attraction.name = attraction_params[:name]
+    @attraction.address = attraction_params[:address]
+    @attraction.duration_minutes = attraction_params[:duration_minutes]
+    @attraction.max_capacity = attraction_params[:max_capacity]
+    @attraction.picture = attraction_params[:picture]
+    @attraction.company_id = @company.id
 
     respond_to do |format|
       if @attraction.save
@@ -55,6 +68,9 @@ class AttractionsController < ApplicationController
   # DELETE /attractions/1
   # DELETE /attractions/1.json
   def destroy
+    if am_i_employee?
+      return
+    end
     @attraction.destroy
     respond_to do |format|
       format.html { redirect_to attractions_url, notice: 'Attraction was successfully destroyed.' }
@@ -71,5 +87,24 @@ class AttractionsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def attraction_params
       params.require(:attraction).permit(:name, :address, :duration_minutes, :max_capacity, :company_id, :picture)
+    end
+
+    def get_my_company_id
+      @employee = Employee.find_by(user_id:current_user.id)
+    
+      if @employee
+        @company = Company.find(id=@employee.company_id)
+      else
+        @company = Company.find_by(user_id:current_user.id)
+      end
+    end
+
+    def am_i_employee?
+      @employee = Employee.find_by(user_id:current_user.id)
+      if @employee
+        return true
+      else
+        return false
+      end
     end
 end

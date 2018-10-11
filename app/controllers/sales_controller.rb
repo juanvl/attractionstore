@@ -1,4 +1,5 @@
 class SalesController < ApplicationController
+  before_action :require_login
   before_action :set_sale, only: [:show, :edit, :update, :destroy]
 
   # GET /sales

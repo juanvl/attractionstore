@@ -1,4 +1,5 @@
 class CompaniesController < ApplicationController
+  before_action :require_login, :except => [:create, :new]
   before_action :set_company, only: [:show, :edit, :update, :destroy]
 
   # GET /companies

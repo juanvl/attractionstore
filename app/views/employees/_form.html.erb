@@ -26,14 +26,14 @@
     <%= form.text_field :job_role %>
   </div>
 
-  <div class="field">
-    <%= form.label :company_id %>
-    <%= form.text_field :company_id %>
+  <div class="text-field">
+    <%= form.label :email %>
+    <%= form.text_field :email, type: 'email' %>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+  <div class="password-field">
+    <%= form.label :password %>
+    <%= form.password_field :password %>
   </div>
 
   <div class="actions">

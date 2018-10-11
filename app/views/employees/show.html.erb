@@ -17,12 +17,12 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @employee.company %>
+  <%= @employee.company.social_name %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @employee.user %>
+  <%= @employee.user.email %>
 </p>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
